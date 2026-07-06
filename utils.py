@@ -1,7 +1,7 @@
 import io
 import aiohttp
 from PIL import Image
-from typing import Optional, Tuple
+from typing import Tuple
 import logging
 
 logger = logging.getLogger(__name__)
