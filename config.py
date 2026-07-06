@@ -4,28 +4,41 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Telegram Bot Configuration
+# ============================================
+# TELEGRAM BOT TOKEN (FROM @BotFather)
+# ============================================
 TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+
 if not TELEGRAM_BOT_TOKEN:
-    raise ValueError("TELEGRAM_BOT_TOKEN is not set in environment variables")
+    raise ValueError(
+        "🚨 TELEGRAM_BOT_TOKEN is not set!\n"
+        "Please set it in Railway Variables or .env file"
+    )
 
-# API Endpoints
-POLLINATIONS_API = "https://image.pollinations.ai/prompt/"
-URL_SHORTENER_API = "https://spoo.me/"
-
-# Supported image formats for conversion
-SUPPORTED_FORMATS = ['png', 'jpg', 'jpeg', 'webp', 'gif', 'bmp', 'tiff']
-
-# Image generation settings
-IMAGE_WIDTH = 1024
-IMAGE_HEIGHT = 1024
-
-# Bot information
+# ============================================
+# BOT INFORMATION
+# ============================================
 BOT_NAME = "AI Art Studio Bot"
 BOT_USERNAME = "ai_art_studio_bot"
 BOT_VERSION = "1.0.0"
 
-# Command descriptions for help menu
+# ============================================
+# API ENDPOINTS
+# ============================================
+POLLINATIONS_API = "https://image.pollinations.ai/prompt/"
+URL_SHORTENER_API = "https://spoo.me/"
+
+# ============================================
+# IMAGE SETTINGS
+# ============================================
+IMAGE_WIDTH = 1024
+IMAGE_HEIGHT = 1024
+
+SUPPORTED_FORMATS = ['png', 'jpg', 'jpeg', 'webp', 'gif', 'bmp', 'tiff']
+
+# ============================================
+# COMMAND DESCRIPTIONS
+# ============================================
 COMMAND_DESCRIPTIONS = {
     'start': '🚀 Start the bot and see welcome message',
     'generate': '🎨 Generate an AI image from text prompt',
